@@ -21,3 +21,4 @@ filename = kw + '.html'
 with open(filename, 'w', encoding='utf-8') as fp:
     fp.write(page_text)
 print('保存成功')
+response.status_code

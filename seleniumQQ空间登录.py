@@ -1,0 +1,18 @@
+from selenium import webdriver
+from time import sleep
+bro = webdriver.Chrome()
+bro.get('https://qzone.qq.com/')
+bro.switch_to.frame('login_frame')
+a_tag=bro.find_element_by_id("switcher_plogin")
+a_tag.click()
+userName_tag = bro.find_element_by_id('u')
+passWord_tag = bro.find_element_by_id('p')
+sleep(2)
+userName_tag.send_keys('1071310846')
+sleep(1)
+passWord_tag.send_keys('13768647586feng')
+sleep(1)
+btn = bro.find_element_by_id('login_button')
+btn.click()
+sleep(3)
+bro.close()
